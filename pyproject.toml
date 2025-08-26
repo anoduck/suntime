@@ -1,0 +1,37 @@
+[project]
+name = "suntime"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alive-progress>=3.3.0",
+    "matplotlib>=3.10.5",
+    "numpy>=2.3.2",
+    "opencv-contrib-python>=4.11.0.86",
+    "pysolar",
+    "scipy>=1.16.1",
+    "simple-parsing>=0.1.7",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "E501",  # line too long
+    "F401",  # module imported but unused
+    "F841",  # local variable assigned but unused
+]
+
+[tool.ruff.lint.pyflakes]
+allowed-unused-imports = ["all"]
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[tool.uv.sources]
+pysolar = { git = "https://github.com/pingswept/pysolar" }

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# The dotenv file for object detection
+
+# Your Latitude; Norther Hemisphere should be positive, Southern Hemisphere negative.
+# Example for NYC: 40.740647
+latitude=
+# Your longitude; Western Hemisphere negative, Eastern Hemisphere Positive.
+# Example for NYC: -73.9926947
+longitude=
+# Your Local timezone.
+# For use by python library pytz
+# Example: PST
+timezone=
+# What direction was the camera facing in lowercase characters?
+# Example: north
+orientation=
+
+# -------------------------------------------------------------
+# Defining est start date
+# -------------------------------------------------------------
+# An estimated point time for when the photo was taken.
+# This will be a little more tricky, because the file is parsed by your shell FIRST,
+# and then passed to python as an environment variable. The desired result is to provide
+# Python with the list "[year, month, day]".
+# When read, this will be converted into a Bash array, and then a Python list object.
+
+# Example: 2024
+START_YEAR=
+
+# Example: 12
+START_MONTH=
+
+#Example: 25
+START_DAY=
+
+# ===============================================================
+# DO NOT TOUCH BELOW THIS POINT, IT IS USED FOR ARRAY GENERATION
+est_start_date=(START_YEAR START_MONTH START_DAY)
