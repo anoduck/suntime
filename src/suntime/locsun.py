@@ -8,27 +8,11 @@
 import math
 import cv2 as cv
 import numpy as np
-import importlib
-import importlib.util
-# from OpenCV_Python_Utilities import Image
-
-
-## This is some bullshit importation method
-## TODO: Fix this
-# Custom import since repository name contains hyphens
-def import_from(module, name):
-    module = __import__(module, fromlist=[name])
-    return getattr(module, name)
-
-
-Util = importlib.import_module("OpenCV-Python-Utilities")
-Image = import_from("OpenCV-Python-Utilities.Image", "Image")
-Contours = import_from("OpenCV-Python-Utilities.Contours", "Contours")
-Draw = import_from("OpenCV-Python-Utilities.Draw", "Draw")
+from .image_utils import Image
 
 
 class LocSun:
-    def analemma(self, image, log):
+    def analemma(self, image) -> tuple:
         radius = int(51)
         last_center = (0.0, 0.0)
         # reduce image size by 20px on all sides and auto converts it to gray
@@ -96,5 +80,5 @@ class LocSun:
             (255, 255, 255),
             2,
         )
-        log.info(f"Center: {center}, Radius: {int(radius)}")
+        print(f"Center: {center}, Radius: {int(radius)}")
         return image2, center

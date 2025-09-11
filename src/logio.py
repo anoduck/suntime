@@ -57,7 +57,7 @@ class LogIO(threading.Thread):
             handler.setFormatter(formatter)
             log.addHandler(handler)
             log.info("## ========================================= ##")
-            log.info("You have now Started obj_detect.py")
+            log.info("You have now Started suntime.py")
             log.info("## ========================================= ##")
             log.info("Acquired Logger")
             return log

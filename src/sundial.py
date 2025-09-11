@@ -15,7 +15,7 @@ import os
 import math
 import datetime
 from pytz import timezone
-from locsun import LocSun
+from src.suntime.locsun import LocSun
 from detector import Detector
 
 

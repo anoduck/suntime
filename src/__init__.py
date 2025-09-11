@@ -11,6 +11,6 @@ from .__main__ import Main
 from .config import Options
 from .genio import GenIO
 from .sundial import Sundial
-from .locsun import LocSun
+from .suntime.locsun import LocSun
 from .horizon import Horizon
 from .detector import Detector

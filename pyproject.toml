@@ -1,8 +1,11 @@
 [project]
 name = "suntime"
 version = "0.1.0"
-description = "Add your description here"
+description = "Extract photo time and date based on sun position and shadow length"
 readme = "README.md"
+authors = [
+    { name = "anoduck", email = "9925396+anoduck@users.noreply.github.com" }
+]
 requires-python = ">=3.13"
 dependencies = [
     "alive-progress>=3.3.0",
@@ -14,11 +17,16 @@ dependencies = [
     "simple-parsing>=0.1.7",
 ]
 
+[tool.ruff]
+exclude = [".venv", "*.ipynb"]
+
 [tool.ruff.lint]
 ignore = [
     "E501",  # line too long
     "F401",  # module imported but unused
     "F841",  # local variable assigned but unused
+    "E701",  # Ignore multiple statement one one line.
+    "E722",  # Ignore bare excepts
 ]
 
 [tool.ruff.lint.pyflakes]
@@ -35,3 +43,7 @@ major_version_zero = true
 
 [tool.uv.sources]
 pysolar = { git = "https://github.com/pingswept/pysolar" }
+
+[build-system]
+requires = ["uv_build>=0.8.11,<0.9.0"]
+build-backend = "uv_build"
