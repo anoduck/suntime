@@ -1,12 +1,30 @@
+<pre>
+_____/\\\\\\\\\\\____/\\\________/\\\__/\\\\\_____/\\\__/\\\\\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\____________/\\\\__/\\\\\\\\\\\\\\\_        
+ ___/\\\/////////\\\_\/\\\_______\/\\\_\/\\\\\\___\/\\\_\///////\\\/////__\/////\\\///__\/\\\\\\________/\\\\\\_\/\\\///////////__       
+  __\//\\\______\///__\/\\\_______\/\\\_\/\\\/\\\__\/\\\_______\/\\\___________\/\\\_____\/\\\//\\\____/\\\//\\\_\/\\\_____________      
+   ___\////\\\_________\/\\\_______\/\\\_\/\\\//\\\_\/\\\_______\/\\\___________\/\\\_____\/\\\\///\\\/\\\/_\/\\\_\/\\\\\\\\\\\_____     
+    ______\////\\\______\/\\\_______\/\\\_\/\\\\//\\\\/\\\_______\/\\\___________\/\\\_____\/\\\__\///\\\/___\/\\\_\/\\\///////______    
+     _________\////\\\___\/\\\_______\/\\\_\/\\\_\//\\\/\\\_______\/\\\___________\/\\\_____\/\\\____\///_____\/\\\_\/\\\_____________   
+      __/\\\______\//\\\__\//\\\______/\\\__\/\\\__\//\\\\\\_______\/\\\___________\/\\\_____\/\\\_____________\/\\\_\/\\\_____________  
+       _\///\\\\\\\\\\\/____\///\\\\\\\\\/___\/\\\___\//\\\\\_______\/\\\________/\\\\\\\\\\\_\/\\\_____________\/\\\_\/\\\\\\\\\\\\\\\_ 
+        ___\///////////________\/////////_____\///_____\/////________\///________\///////////__\///______________\///__\///////////////__
+</pre>
+
 # Suntime
 
-Suntime is a project for calculating sunrise, sunset, and related solar times for any location on Earth.
+This application attempts to correctly guess the time and date (or a close estimation) of when an image was taken based on the position of the sun, length of shadows, and the shadow's angle relative to the object that casted it. 
+
+It was originally theorized in 2022, and since numerous whitepapers have been written about performing such a task, but an actual implementation of which has still not been found.
 
 ## Features
 
-- Calculate sunrise and sunset times
-- Support for any latitude and longitude
-- Easy-to-use API
+- Shadow recognition and measurement
+- Astronomical positioning of the sun.
+- Object Detection
+
+## Current Status
+
+There have been about three attempts at implementation, and revision to the methods to acquire a correct date. Currently, the repository is little more than a developer playing around with computational vision. So, no need to even bother with it. 
 
 ## Installation
 
